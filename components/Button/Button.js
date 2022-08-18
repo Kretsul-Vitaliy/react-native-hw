@@ -1,4 +1,4 @@
-import { Text, StyleSheet, Pressable } from 'react-native';
+import { Text, StyleSheet, TouchableOpacity } from 'react-native';
 
 export default function Button(props) {
   const {
@@ -8,9 +8,9 @@ export default function Button(props) {
     styleText = styles.text,
   } = props;
   return (
-    <Pressable style={style} onPress={onPress}>
+    <TouchableOpacity style={style} onPress={onPress} activeOpacity={0.8}>
       <Text style={styleText}>{title}</Text>
-    </Pressable>
+    </TouchableOpacity>
   );
 }
 
